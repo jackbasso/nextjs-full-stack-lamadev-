@@ -18,7 +18,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-/* 
+ 
 .theme{
   transition: 1s all ease;
 }
@@ -33,9 +33,7 @@ a {
   color: #bbb;
 }
 
- */
 .container {
-  background-color: #111;
   max-width: 1366px;
   min-height: 100vh;
   margin: 0 auto;
