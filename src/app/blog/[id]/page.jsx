@@ -4,9 +4,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 async function getData(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-    cache: "no-store",
-  });
+  //const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    const res = await fetch(`http://localhost:3000/api/posts/${id}`)
+  //   const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+  //   cache: "no-store",
+  // });
 
   if (!res.ok) {
     return notFound()
@@ -34,7 +36,7 @@ const BlogPost = async ({ params }) => {
         <div className={styles.info}>
           <h1 className={styles.title}>{data.title}</h1>
           <p className={styles.desc}>
-          quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
+            {data.desc}
           </p>
           <div className={styles.author}>
             <Image
