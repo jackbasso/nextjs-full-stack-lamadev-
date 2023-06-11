@@ -5,7 +5,8 @@ import Image from "next/image";
 
 async function getData() {
   //const res = await fetch("http://localhost:3000/api/posts")
-  const res = await fetch("http://localhost:3000/api/posts", {
+  // const res = await fetch("http://localhost:3000/api/posts/api/posts", {
+  const res = await fetch("https://nextjs-full-stack-lamadev-5a4sxnnxc-jackbasso.vercel.app/api/posts", {
     //cache: "force-cache",
     cache: "no-store",
   });
