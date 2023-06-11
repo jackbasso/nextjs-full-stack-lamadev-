@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import useSWR from 'swr';
 import styles from './page.module.css';
+import { useSession } from 'next-auth/react';
 
 const Dashboard = () => {
   
@@ -28,6 +29,9 @@ const Dashboard = () => {
   //   };
   //   getData()
   // },[]);
+
+
+  const session = useSession();
 
   // FETCHING DATA WITH SWR
 
